@@ -14,18 +14,18 @@ export default function Home() {
    * 
    */
   return (
-    <main className="grid grid-row-3 grid-column-2 mt-2">
-      <section className="bg-slate-300 col-start-1 col-end-1 row-start-1 row-end-1 row-span-1 text-center">
+    <main className="grid grid-row-3 grid-column-3 mt-2">
+      <section className="bg-slate-300 col-start-1 col-end-3 col-span-2 row-start-1 row-end-1 row-span-1 text-center">
         <h1 className="text-3xl font-bold text-brown ">First Time Renter's Checklist</h1>
         <p className="text-sm text-mediumGray">Love means preparing you for success!!!</p>
       </section>
-      <section className="bg-red-300 col-start-1 col-end-1 row-start-2 row-end-2">
+      <section className="bg-red-300 col-start-1 col-end-3 col-span-2 row-start-2 row-end-2">
         <AddAdvice />
       </section>
-      <section className="bg-lime-300 col-start-1 col-end-1 row-start-3 row-end-3 ">
+      <section className="bg-lime-300 col-start-1 col-end-3 col-span-2 row-start-3 row-end-3 ">
         <Advice />
       </section>
-      <section className="bg-sky-300 col-start-2 col-end-2 row-span-3 w-2/5">
+      <section className="bg-sky-300 col-start-3 col-end-3 row-span-3">
         <Checklist />
         <Checklist />
       </section>
