@@ -1,5 +1,8 @@
 
-import AddAdvice from "@/components/AddAdvice/addAdvice"
+import AddAdvice from "@/components/AddAdvice/addAdvice";
+import Advice from "@/components/Advice/advice";
+import Checklist from "@/components/Checklist/checklist";
+
 export default function Home() {
   /**
    * 1. Seperate sections via Grid by color - Done
@@ -19,8 +22,13 @@ export default function Home() {
       <section className="bg-red-300 col-start-1 col-end-1 row-start-2 row-end-2">
         <AddAdvice />
       </section>
-      <section className="bg-lime-300 col-start-1 col-end-1 row-start-3 row-end-3 ">Advice</section>
-      <section className="bg-sky-300 col-start-2 col-end-2 row-span-3">Checklist</section>
+      <section className="bg-lime-300 col-start-1 col-end-1 row-start-3 row-end-3 ">
+        <Advice />
+      </section>
+      <section className="bg-sky-300 col-start-2 col-end-2 row-span-3 w-2/5">
+        <Checklist />
+        <Checklist />
+      </section>
     </main>
   )
 }
