@@ -1,12 +1,12 @@
 
-
+import AddAdvice from "@/components/AddAdvice/addAdvice"
 export default function Home() {
   /**
    * 1. Seperate sections via Grid by color - Done
-   * 2. Setup main title
+   * 2. Setup main title - Done
    * 3. Create dummy components: AddTip, Advice, Checklist
    * 3a. Include dummy data where needed
-   * 3b. No colors yet, just bacic structure
+   * 3b. Setup basic structure (UI & initial Styling) - no functionality
    * 3c. Place components on main page
    * 
    */
@@ -16,7 +16,9 @@ export default function Home() {
         <h1 className="text-3xl font-bold text-brown ">First Time Renter's Checklist</h1>
         <p className="text-sm text-mediumGray">Love means preparing you for success!!!</p>
       </section>
-      <section className="bg-red-300 col-start-1 col-end-1 row-start-2 row-end-2 ">Add Advice</section>
+      <section className="bg-red-300 col-start-1 col-end-1 row-start-2 row-end-2">
+        <AddAdvice />
+      </section>
       <section className="bg-lime-300 col-start-1 col-end-1 row-start-3 row-end-3 ">Advice</section>
       <section className="bg-sky-300 col-start-2 col-end-2 row-span-3">Checklist</section>
     </main>
