@@ -14,7 +14,7 @@ export default function Home() {
    * 
    */
   return (
-    <main className="grid grid-row-3 grid-column-3 mt-2">
+    <main className="grid grid-row-3 grid-column-3 m-2">
       <section className="bg-slate-300 col-start-1 col-end-3 col-span-2 row-start-1 row-end-1 row-span-1 text-center">
         <h1 className="text-3xl font-bold text-brown ">First Time Renter's Checklist</h1>
         <p className="text-sm text-mediumGray">Love means preparing you for success!!!</p>
