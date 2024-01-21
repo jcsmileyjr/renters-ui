@@ -2,27 +2,21 @@
 import AddAdvice from "@/components/AddAdvice/addAdvice";
 import Advice from "@/components/Advice/advice";
 import Checklist from "@/components/Checklist/checklist";
+import Image from 'next/image';
+import SunIcon from '../images/sun-icon-yellow-1.png';
 
 // Checklist Dummy data
 const checkListDataA = ["1st and last month rent + security deposit", "$1,000 to turn on utilities", "3 months worth of expenses in primary account or at a minimal, $3,000 in saving account."];
 const checkListDataB = ["couch", "bed & mattress (new)", "dresser"];
 
-// Advice data
+// Advice Dummy data
 const AdviceData = [{"advice":"Buy only what you Need. Expand slowly. Example is you may not need the entire living room furnish. A simple tv stand and love couch may be enough for now.", "likes": 5, "id": 1}, {"advice":"Goodwill and stores like it are your friends. Avoid unneccesary debt. Example is a $50 affordable slightly dented working dryer is the right fit for now.", "likes": 2, "id": 2}]
 
 export default function Home() {
-  /**
-   * 1. Seperate sections via Grid by color - Done
-   * 2. Setup main title - Done
-   * 3. Create dummy components: AddTip, Advice, Checklist
-   * 3a. Include dummy data where needed
-   * 3b. Setup basic structure (UI & initial Styling) - no functionality
-   * 3c. Place components on main page
-   * 
-   */
   return (
     <main className=" px-4 grid grid-row-4 grid-column-1 sm:grid-row-3 sm:grid-column-3 m-2">
       <section className="bg-slate-300  sm:col-start-1 sm:col-end-3 sm:col-span-2 row-start-1 row-end-1 sm:row-span-1 text-center">
+        <Image className="absolute -top-32 -left-32 -z-10" priority={false} src={SunIcon} width={250} alt="" />
         <h1 className="text-3xl font-bold text-brown ">First Time Renter's Checklist</h1>
         <p className="text-sm text-mediumGray">Love means preparing you for success!!!</p>
       </section>
