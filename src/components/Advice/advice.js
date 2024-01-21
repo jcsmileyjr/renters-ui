@@ -28,7 +28,6 @@ const AdviceContainer = ({content}) => {
 
 // Component that displays advice and its number of likes from an object array. 
 export default function Advice ({list}) {
-    console.log(list);
     return (
         <div className="">
             {

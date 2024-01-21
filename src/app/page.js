@@ -4,7 +4,7 @@ import Advice from "@/components/Advice/advice";
 import Checklist from "@/components/Checklist/checklist";
 
 // Checklist Dummy data
-const checkListDataA = ["1st and last month rent + security deposit", "$1000 to turn on utilities", "$3000 saving"];
+const checkListDataA = ["1st and last month rent + security deposit", "$1,000 to turn on utilities", "3 months worth of expenses in primary account or at a minimal, $3,000 in saving account."];
 const checkListDataB = ["couch", "bed & mattress (new)", "dresser"];
 
 // Advice data
