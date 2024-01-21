@@ -4,7 +4,7 @@ import grayPlusIcon from '../../images/plus-icon-gray.png';
 // Component on the landing page that display a checklist of tips
 export default function Checklist ({containerTitle, list}) {
     return(
-        <div className="mb-10">
+        <div className="mb-10 last:mb-0">
             <h2 className="text-brown text-2xl">{containerTitle}</h2>
             {
                 list.map( (item, index) => (
