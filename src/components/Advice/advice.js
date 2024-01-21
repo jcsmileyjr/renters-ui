@@ -7,7 +7,7 @@ const AdviceContainer = () => {
         <div className="flex justify-center items-center mt-10">
             <div className='w-1/2'>
                 <div className='flex'>
-                    <p className='text-mediumGray'><span className='text-brown font-bold'>Advice:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p className='text-mediumGray pr-2'><span className='text-brown font-bold'>Advice:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <div className=''>
                         <Image priority={false} src={BrownThumbsUp} width={75} alt="Thumbs up icon, when click, update number of likes by one." />
                         <p className='text-center text-brown'>Like</p>

@@ -3,6 +3,10 @@ import AddAdvice from "@/components/AddAdvice/addAdvice";
 import Advice from "@/components/Advice/advice";
 import Checklist from "@/components/Checklist/checklist";
 
+// Checklist Dummy data
+const checkListDataA = ["1st and last month rent + security deposit", "$1000 to turn on utilities", "$3000 saving"];
+const checkListDataB = ["couch", "bed & mattress (new)", "dresser"];
+
 export default function Home() {
   /**
    * 1. Seperate sections via Grid by color - Done
@@ -26,8 +30,8 @@ export default function Home() {
         <Advice />
       </section>
       <section className="bg-sky-300 col-start-3 col-end-3 row-span-3">
-        <Checklist />
-        <Checklist />
+        <Checklist containerTitle={"Must have Finances"} list={checkListDataA} />
+        <Checklist containerTitle={"Need to have Furniture"} list={checkListDataB} />
       </section>
     </main>
   )
