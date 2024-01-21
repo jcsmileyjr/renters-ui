@@ -14,7 +14,7 @@ export default function Checklist ({containerTitle, list}) {
                     </div>   
                 ))
             }
-            <div className="flex justify-start items-center mt-4">
+            <div className="flex justify-center items-center mt-4">
                 <button className='text-mediumGray border-2 border-brown border-solid rounded w-1/3 p-1 flex justify-center items-center gap-2'>
                     <Image priority={false} src={grayPlusIcon} width={15} height={10} alt="Plus icon, when click, opens add item to Checklist page." />
                     <p>Add Item</p>

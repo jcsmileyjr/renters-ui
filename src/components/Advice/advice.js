@@ -4,7 +4,7 @@ import SunIcon from '../../images/sun-icon-yellow-1.png';
 
 const AdviceContainer = ({content}) => {
     return (
-        <div className="flex justify-center items-center mt-10">
+        <div className="flex justify-center items-center mt-10 first:mt-0 sm:first:mt-10">
             <div className='sm:w-1/2'>
                 <div className='flex'>
                     <p className='text-mediumGray pr-2'><span className='text-brown font-bold mr-2'>Advice:</span>{content.advice}</p>
