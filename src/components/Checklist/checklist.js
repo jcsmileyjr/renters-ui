@@ -4,7 +4,7 @@ import grayPlusIcon from '../../images/plus-icon-gray.png';
 // Component on the landing page that display a checklist of tips
 export default function Checklist ({containerTitle, list}) {
     return(
-        <div className="mb-10">
+        <div className="mb-10 last:mb-0">
             <h2 className="text-brown text-2xl">{containerTitle}</h2>
             {
                 list.map( (item, index) => (
@@ -14,7 +14,7 @@ export default function Checklist ({containerTitle, list}) {
                     </div>   
                 ))
             }
-            <div className="flex justify-start items-center mt-4">
+            <div className="flex justify-center items-center mt-4">
                 <button className='text-mediumGray border-2 border-brown border-solid rounded w-1/3 p-1 flex justify-center items-center gap-2'>
                     <Image priority={false} src={grayPlusIcon} width={15} height={10} alt="Plus icon, when click, opens add item to Checklist page." />
                     <p>Add Item</p>

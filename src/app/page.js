@@ -21,18 +21,19 @@ export default function Home() {
    * 
    */
   return (
-    <main className="grid grid-row-3 grid-column-3 m-2">
-      <section className="bg-slate-300 col-start-1 col-end-3 col-span-2 row-start-1 row-end-1 row-span-1 text-center">
+    <main className=" px-4 grid grid-row-4 grid-column-1 sm:grid-row-3 sm:grid-column-3 m-2">
+      <section className="bg-slate-300  sm:col-start-1 sm:col-end-3 sm:col-span-2 row-start-1 row-end-1 sm:row-span-1 text-center">
         <h1 className="text-3xl font-bold text-brown ">First Time Renter's Checklist</h1>
         <p className="text-sm text-mediumGray">Love means preparing you for success!!!</p>
       </section>
-      <section className="bg-red-300 col-start-1 col-end-3 col-span-2 row-start-2 row-end-2">
+      <section className="bg-red-300 row-start-3 row-end-3 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-2 sm:row-end-2">
         <AddAdvice />
       </section>
-      <section className="bg-lime-300 col-start-1 col-end-3 col-span-2 row-start-3 row-end-3 ">
+      <section className="bg-lime-300 row-start-4 row-end-4 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-3 sm:row-end-3 ">
         <Advice list={AdviceData} />
       </section>
-      <section className="bg-sky-300 col-start-3 col-end-3 row-span-3">
+      <section className="bg-sky-300 row-start-2 row-end-2 row-span-1 sm:col-start-3 sm:col-end-3 sm:row-span-3 mt-8 sm:mt-0">
+        <h2 className='font-bold text-2xl text-brown mb-4 text-center underline sm:hidden'>Checklists</h2>
         <Checklist containerTitle={"Must have Finances"} list={checkListDataA} />
         <Checklist containerTitle={"Need to have Furniture"} list={checkListDataB} />
       </section>
