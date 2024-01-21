@@ -7,6 +7,9 @@ import Checklist from "@/components/Checklist/checklist";
 const checkListDataA = ["1st and last month rent + security deposit", "$1000 to turn on utilities", "$3000 saving"];
 const checkListDataB = ["couch", "bed & mattress (new)", "dresser"];
 
+// Advice data
+const AdviceData = [{"advice":"Buy only what you Need. Expand slowly. Example is you may not need the entire living room furnish. A simple tv stand and love couch may be enough for now.", "likes": 5, "id": 1}, {"advice":"Goodwill and stores like it are your friends. Avoid unneccesary debt. Example is a $50 affordable slightly dented working dryer is the right fit for now.", "likes": 2, "id": 2}]
+
 export default function Home() {
   /**
    * 1. Seperate sections via Grid by color - Done
@@ -27,7 +30,7 @@ export default function Home() {
         <AddAdvice />
       </section>
       <section className="bg-lime-300 col-start-1 col-end-3 col-span-2 row-start-3 row-end-3 ">
-        <Advice />
+        <Advice list={AdviceData} />
       </section>
       <section className="bg-sky-300 col-start-3 col-end-3 row-span-3">
         <Checklist containerTitle={"Must have Finances"} list={checkListDataA} />

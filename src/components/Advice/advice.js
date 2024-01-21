@@ -2,16 +2,16 @@ import Image from 'next/image';
 import BrownThumbsUp from '../../images/thumbs-up-brown-icon.png';
 import SunIcon from '../../images/sun-icon-yellow-1.png';
 
-const AdviceContainer = () => {
+const AdviceContainer = ({content}) => {
     return (
         <div className="flex justify-center items-center mt-10">
             <div className='w-1/2'>
                 <div className='flex'>
-                    <p className='text-mediumGray pr-2'><span className='text-brown font-bold'>Advice:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p className='text-mediumGray pr-2'><span className='text-brown font-bold mr-2'>Advice:</span>{content.advice}</p>
                     <div className=''>
-                        <Image priority={false} src={BrownThumbsUp} width={75} alt="Thumbs up icon, when click, update number of likes by one." />
-                        <p className='text-center text-brown'>Like</p>
-                        <p className='text-center text-brown'>1</p>
+                        <Image priority={false} src={BrownThumbsUp} width={30} alt="Thumbs up icon, when click, update number of likes by one." />
+                        <p className='text-center text-brown'>Likes</p>
+                        <p className='text-center text-brown'>{content.likes}</p>
                     </div>
                 </div>
                 <div className='flex justify-between mt-2'>
@@ -27,14 +27,15 @@ const AdviceContainer = () => {
 }
 
 // Component that displays advice and its number of likes from an object array. 
-export default function Advice () {
+export default function Advice ({list}) {
+    console.log(list);
     return (
         <div className="">
-            <AdviceContainer />
-            <AdviceContainer />
-            {/* <AdviceContainer />
-            <AdviceContainer />
-            <AdviceContainer /> */}
+            {
+                list.map((content, index) => {
+                    return <AdviceContainer key={content.id} content={content}/>
+                })
+            }
         </div>
     )
 }
