@@ -9,7 +9,7 @@ export default function Checklist ({containerTitle, list}) {
             {
                 list.map( (item, index) => (
                     <div key={`${containerTitle}-${index}`} className="flex mb-2">
-                        <input type="checkbox" id="item-1" className="mr-2 mt-1.5 flex justify-center items-center p-2 h-4 text-2xl appearance-none border-2 border-brown border-solid rounded" />
+                        <input type="checkbox" id="item-1" className="cursor-pointer mr-2 mt-1.5 flex justify-center items-center p-2 h-4 text-2xl appearance-none border-2 border-brown border-solid rounded" />
                         <label htmlFor="item-1" >{item}</label>
                     </div>   
                 ))

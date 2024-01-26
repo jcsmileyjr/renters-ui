@@ -8,7 +8,7 @@ const AdviceContainer = ({content}) => {
             <div className='sm:w-1/2'>
                 <div className='flex'>
                     <p className='text-mediumGray pr-2'><span className='text-brown font-bold mr-2'>Advice:</span>{content.advice}</p>
-                    <div className=''>
+                    <div className='cursor-pointer'>
                         <Image priority={false} src={BrownThumbsUp} width={30} alt="Thumbs up icon, when click, update number of likes by one." />
                         <p className='text-center text-brown'>Likes</p>
                         <p className='text-center text-brown'>{content.likes}</p>
