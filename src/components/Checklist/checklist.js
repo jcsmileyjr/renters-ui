@@ -9,13 +9,13 @@ export default function Checklist ({containerTitle, list}) {
             {
                 list.map( (item, index) => (
                     <div key={`${containerTitle}-${index}`} className="flex mb-2">
-                        <input type="checkbox" id="item-1" className="cursor-pointer mr-2 mt-1.5 flex justify-center items-center p-2 h-4 text-2xl appearance-none border-2 border-brown border-solid rounded" />
+                        <input type="checkbox" id="item-1" className="bg-paleYellow cursor-pointer mr-2 mt-1.5 flex justify-center items-center p-2 h-4 text-2xl appearance-none border border-brown border-solid rounded" />
                         <label htmlFor="item-1" >{item}</label>
                     </div>   
                 ))
             }
             <div className="flex justify-center items-center mt-4">
-                <button className='text-mediumGray border-2 border-brown border-solid rounded w-1/3 p-1 flex justify-center items-center gap-2'>
+                <button className='bg-paleYellow text-mediumGray border border-brown border-solid rounded w-1/3 p-1 flex justify-center items-center gap-2'>
                     <Image priority={false} src={grayPlusIcon} width={15} height={10} alt="Plus icon, when click, opens add item to Checklist page." />
                     <p>Add Item</p>
                 </button>
