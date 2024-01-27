@@ -20,7 +20,7 @@ export default function Home() {
         <h1 className="text-3xl font-bold text-brown ">First Time Renter's Checklist</h1>
         <p className="text-sm text-mediumGray">Love means preparing you for success!!!</p>
       </section>
-      <section className="bg-red-300 row-start-3 row-end-3 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-2 sm:row-end-2">
+      <section className="bg-red-300 row-start-3 row-end-3 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-2 sm:row-end-2 mt-12 sm:mt-8">
         <AddAdvice />
       </section>
       <section className="bg-lime-300 row-start-4 row-end-4 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-3 sm:row-end-3 ">
