@@ -10,9 +10,17 @@ const checkListDataA = ["1st and last month rent + security deposit", "$1,000 to
 const checkListDataB = ["couch", "bed & mattress (new)", "dresser"];
 
 // Advice Dummy data
-const AdviceData = [{"advice":"Buy only what you Need. Expand slowly. Example is you may not need the entire living room furnish. A simple tv stand and love couch may be enough for now.", "likes": 5, "id": 1}, {"advice":"Goodwill and stores like it are your friends. Avoid unneccesary debt. Example is a $50 affordable slightly dented working dryer is the right fit for now.", "likes": 2, "id": 2}]
+//const AdviceData = [{"advice":"Buy only what you Need. Expand slowly. Example is you may not need the entire living room furnish. A simple tv stand and love couch may be enough for now.", "likes": 5, "id": 1}, {"advice":"Goodwill and stores like it are your friends. Avoid unneccesary debt. Example is a $50 affordable slightly dented working dryer is the right fit for now.", "likes": 2, "id": 2}]
 
-export default function Home() {
+async function getAdvice () {
+  const response = await fetch('http://localhost:8080/getAdvice', { cache: 'no-store' });
+  const data = await response.json();
+  return data;
+}
+
+export default async function Home() {
+  const AdviceData = await getAdvice();
+
   return (
     <main className=" px-4 grid grid-row-4 grid-column-1 sm:grid-row-3 sm:grid-column-3 m-2">
       <section className="bg-slate-300  sm:col-start-1 sm:col-end-3 sm:col-span-2 row-start-1 row-end-1 sm:row-span-1 text-center">
