@@ -21,7 +21,7 @@ export default function Checklist ({containerTitle, list}) {
             <h2 className="text-brown text-2xl">{containerTitle}</h2>
             {
                 list.map( (item, index) => (
-                    <Checkbox key={`${containerTitle}-${index}`} item={item} containerTitle={containerTitle} />
+                    <Checkbox key={`${containerTitle}-${index}`} item={item.item} containerTitle={containerTitle} />
                 ))
             }
             <div className="flex justify-center items-center mt-4">

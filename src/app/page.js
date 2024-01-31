@@ -6,8 +6,8 @@ import Image from 'next/image';
 import SunIcon from '../images/sun-icon-yellow-1.png';
 
 // Checklist Dummy data
-const checkListDataA = ["1st and last month rent + security deposit", "$1,000 to turn on utilities", "3 months worth of expenses in primary account or at a minimal, $3,000 in saving account."];
-const checkListDataB = ["couch", "bed & mattress (new)", "dresser"];
+// const checkListDataA = ["1st and last month rent + security deposit", "$1,000 to turn on utilities", "3 months worth of expenses in primary account or at a minimal, $3,000 in saving account."];
+// const checkListDataB = ["couch", "bed & mattress (new)", "dresser"];
 
 // Advice Dummy data
 //const AdviceData = [{"advice":"Buy only what you Need. Expand slowly. Example is you may not need the entire living room furnish. A simple tv stand and love couch may be enough for now.", "likes": 5, "id": 1}, {"advice":"Goodwill and stores like it are your friends. Avoid unneccesary debt. Example is a $50 affordable slightly dented working dryer is the right fit for now.", "likes": 2, "id": 2}]
@@ -18,8 +18,22 @@ async function getAdvice () {
   return data;
 }
 
+async function getChecklistA () {
+  const response = await fetch('http://localhost:8080/getChecklistAData', { cache: 'no-store' });
+  const data = await response.json();
+  return data;
+}
+
+async function getChecklistB () {
+  const response = await fetch('http://localhost:8080/getChecklistBData', { cache: 'no-store' });
+  const data = await response.json();
+  return data;
+}
+
 export default async function Home() {
   const AdviceData = await getAdvice();
+  const checkListDataA = await getChecklistA();
+  const checkListDataB = await getChecklistB();
 
   return (
     <main className=" px-4 grid grid-row-4 grid-column-1 sm:grid-row-3 sm:grid-column-3 m-2">
