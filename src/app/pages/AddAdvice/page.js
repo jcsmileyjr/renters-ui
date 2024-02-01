@@ -11,9 +11,14 @@ export default function AddAdvice () {
     const [content, setContent] = useState("");
 
     const createAdvice = () => {
-        console.log("new advice: ", content);
-        router.push('/');
+        const requestOptions = {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({'advice': content, 'likes' : 1})
+        }
 
+        fetch('http://localhost:8080/createAdvice', requestOptions);        
+        router.push('/');
     }
     return (
         <main className="px-4 m-2 flex flex-col items-center">
