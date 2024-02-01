@@ -1,5 +1,5 @@
 
-import AddAdvice from "@/components/AddAdvice/addAdvice";
+import AddAdviceButton from "@/components/AddAdviceButton/addAdviceButton";
 import Advice from "@/components/Advice/advice";
 import Checklist from "@/components/Checklist/checklist";
 import Image from 'next/image';
@@ -43,7 +43,7 @@ export default async function Home() {
         <p className="text-sm text-mediumGray">Love means preparing you for success!!!</p>
       </section>
       <section className="bg-red-300 row-start-3 row-end-3 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-2 sm:row-end-2 mt-12 sm:mt-8">
-        <AddAdvice />
+        <AddAdviceButton />
       </section>
       <section className="bg-lime-300 row-start-4 row-end-4 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-3 sm:row-end-3 ">
         <Advice list={AdviceData} />

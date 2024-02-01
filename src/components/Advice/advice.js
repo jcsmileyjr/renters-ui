@@ -5,8 +5,9 @@ import SunIcon from '../../images/sun-icon-yellow-1.png';
 import {useState} from 'react';
 
 const AdviceContainer = ({content}) => {
-    const [advice, setAdvice] = useState(content);
+    const [advice, setAdvice] = useState(content); // set the initial state
 
+    // Update an advice's likes. API call to the backend with the current advice and returns a new advice with +1 likes. 
     const updateLikes = async() => {
         const requestOptions = {
             method: 'PUT',
