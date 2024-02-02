@@ -3,6 +3,7 @@ import Image from 'next/image';
 import BrownThumbsUp from '../../images/thumbs-up-brown-icon.png';
 import SunIcon from '../../images/sun-icon-yellow-1.png';
 import {useState} from 'react';
+import AddAdviceButton from '../AddAdviceButton/addAdviceButton';
 
 const AdviceContainer = ({content}) => {
     const [advice, setAdvice] = useState(content); // set the initial state
@@ -43,12 +44,40 @@ const AdviceContainer = ({content}) => {
     )
 }
 
+const createAdvice = (content) => {
+    const requestOptions = {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({'advice': content, 'likes' : 1})
+    }
+
+    fetch('http://localhost:8080/createAdvice', requestOptions);        
+    router.push('/');
+}
+
+
 // Component that displays advice and its number of likes from an object array. 
 export default function Advice ({list}) {
+    const [adviceList, setAdviceList] = useState(list);
+
+    const getAdvice = async (content) => {
+        const requestOptions = {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({'advice': content, 'likes' : 1})
+        }
+    
+        const response = await fetch('http://localhost:8080/createAdvice', requestOptions);      
+        const data = await response.json();
+        setAdviceList(data);  
+
+    }
+
     return (
         <div className="">
+            <AddAdviceButton newAdvice={getAdvice} />
             {
-                list.map((content, index) => {
+                adviceList.map((content, index) => {
                     return <AdviceContainer key={content.id} content={content}/>
                 })
             }
