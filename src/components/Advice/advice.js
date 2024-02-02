@@ -25,7 +25,7 @@ const AdviceContainer = ({content}) => {
         <div className="flex justify-center items-center mt-10 first:mt-0 sm:first:mt-10">
             <div className='sm:w-1/2'>
                 <div className='flex'>
-                    <p className='text-mediumGray pr-2'><span className='text-brown font-bold mr-2'>Advice:</span>{advice.advice}</p>
+                    <p className='text-mediumGray pr-2 flex-1'><span className='text-brown font-bold mr-2'>Advice:</span>{advice.advice}</p>
                     <button onClick={() => updateLikes(advice)} className='cursor-pointer'>
                         <Image priority={false} src={BrownThumbsUp} width={30} alt="Thumbs up icon, when click, update number of likes by one." />
                         <p className='text-center text-brown'>Likes</p>
@@ -43,18 +43,6 @@ const AdviceContainer = ({content}) => {
          </div>
     )
 }
-
-const createAdvice = (content) => {
-    const requestOptions = {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({'advice': content, 'likes' : 1})
-    }
-
-    fetch('http://localhost:8080/createAdvice', requestOptions);        
-    router.push('/');
-}
-
 
 // Component that displays advice and its number of likes from an object array. 
 export default function Advice ({list}) {
