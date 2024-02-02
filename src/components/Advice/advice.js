@@ -61,15 +61,20 @@ export default function Advice ({list}) {
     const [adviceList, setAdviceList] = useState(list);
 
     const getAdvice = async (content) => {
-        const requestOptions = {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({'advice': content, 'likes' : 1})
+
+        console.log("content: ", content)
+        if(content === "")return;
+        if(content !== null || content === "") {
+            const requestOptions = {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({'advice': content, 'likes' : 1})
+            }
+        
+            const response = await fetch('http://localhost:8080/createAdvice', requestOptions);      
+            const data = await response.json();
+            setAdviceList(data);  
         }
-    
-        const response = await fetch('http://localhost:8080/createAdvice', requestOptions);      
-        const data = await response.json();
-        setAdviceList(data);  
 
     }
 

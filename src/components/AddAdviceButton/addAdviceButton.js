@@ -9,10 +9,16 @@ export default function AddAdviceButton({newAdvice}) {
     const [content, setContent] = useState("");
 
     const getAdvice = () => {
-        newAdvice(content);
-        setFlipUI(false);
+        if(content === "") {
+            setFlipUI(false);
+            return;
+        } else {
+            newAdvice(content);
+            setFlipUI(false);
+            setContent("");
+        }
     }
-    
+
     return (
         <div className='flex flex-col justify-center items-center mt-8'>
             {!flipUI &&
