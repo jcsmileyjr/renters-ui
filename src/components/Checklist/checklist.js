@@ -41,7 +41,7 @@ export default function Checklist ({containerTitle, list, database}) {
     }
     return(
         <div className="mb-10 last:mb-0">
-            <h2 className="text-brown text-2xl">{containerTitle}</h2>
+            <h2 className="text-brown text-2xl mb-2">{containerTitle}</h2>
             {
                 checkList.map( (item, index) => (
                     <Checkbox key={`${containerTitle}-${index}`} item={item.item} containerTitle={containerTitle} />
