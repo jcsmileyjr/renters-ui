@@ -23,7 +23,7 @@ const AdviceContainer = ({content}) => {
 
     return (
         <div className="flex justify-center items-center mt-10 first:mt-0 sm:first:mt-10">
-            <div className='sm:w-4/5 lg:w-1/2'>
+            <div className='sm:w-4/5 lg:w-9/12 xl:w-1/2'>
                 <div className='flex'>
                     <p className='text-mediumGray pr-2 flex-1'><span className='text-brown font-bold mr-2'>Advice:</span>{advice.advice}</p>
                     <button onClick={() => updateLikes(advice)} className='cursor-pointer'>
