@@ -50,8 +50,8 @@ export default async function Home() {
       </section>
       <section className="bg-sky-300 row-start-2 row-end-2 row-span-1 sm:col-start-3 sm:col-end-3 sm:row-span-3 mt-8 sm:mt-0">
         <h2 className='font-bold text-2xl text-brown mb-4 text-center underline sm:hidden'>Checklists</h2>
-        <Checklist containerTitle={"Must have Finances"} list={checkListDataA} />
-        <Checklist containerTitle={"Need to have Furniture"} list={checkListDataB} />
+        <Checklist containerTitle={"Must have Finances"} list={checkListDataA} database={"A"} />
+        <Checklist containerTitle={"Need to have Furniture"} list={checkListDataB} database={"B"} />
       </section>
     </main>
   )

@@ -2,6 +2,7 @@
 import { useState} from 'react';
 import Image from 'next/image';
 import grayPlusIcon from '../../images/plus-icon-gray.png';
+import AddCheckbox from '../AddCheckbox/addCheckbox';
 
 const Checkbox = ({item, containerTitle}) => {
     const [value, setValue] = useState(false);
@@ -15,21 +16,38 @@ const Checkbox = ({item, containerTitle}) => {
 }
 
 // Component on the landing page that display a checklist of tips
-export default function Checklist ({containerTitle, list}) {
+export default function Checklist ({containerTitle, list, database}) {
+    const [checkList, setCheckList] = useState(list);
+
+    const getChecklistItem = async (content) => {
+        if(content === "")return;
+        if(content !== null || content === "") {
+            const requestOptions = {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({'item': content})
+            }
+            
+            let response;
+            if(database === "A") {
+                response = await fetch('http://localhost:8080/createCheckListItemA', requestOptions);  
+            } else {
+                response = await fetch('http://localhost:8080/createCheckListItemB', requestOptions);     
+            }
+            const data = await response.json();
+            setCheckList(data);  
+        }
+
+    }
     return(
         <div className="mb-10 last:mb-0">
             <h2 className="text-brown text-2xl">{containerTitle}</h2>
             {
-                list.map( (item, index) => (
+                checkList.map( (item, index) => (
                     <Checkbox key={`${containerTitle}-${index}`} item={item.item} containerTitle={containerTitle} />
                 ))
             }
-            <div className="flex justify-center items-center mt-4">
-                <button className='bg-paleYellow text-mediumGray border border-brown border-solid rounded w-2/5 sm:w-2/4 p-1 flex justify-center items-center gap-2'>
-                    <Image priority={false} src={grayPlusIcon} width={15} height={10} alt="Plus icon, when click, opens add item to Checklist page." />
-                    <p>Add Item</p>
-                </button>
-            </div>
+            <AddCheckbox newCheckListItem={getChecklistItem} />
         </div>
     )
 }

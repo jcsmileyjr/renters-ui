@@ -49,8 +49,6 @@ export default function Advice ({list}) {
     const [adviceList, setAdviceList] = useState(list);
 
     const getAdvice = async (content) => {
-
-        console.log("content: ", content)
         if(content === "")return;
         if(content !== null || content === "") {
             const requestOptions = {
