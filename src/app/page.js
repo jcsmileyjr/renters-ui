@@ -36,19 +36,16 @@ export default async function Home() {
   const checkListDataB = await getChecklistB();
 
   return (
-    <main className=" px-4 grid grid-row-4 grid-column-1 sm:grid-row-3 sm:grid-column-3 m-2">
-      <section className="bg-slate-300  sm:col-start-1 sm:col-end-3 sm:col-span-2 row-start-1 row-end-1 sm:row-span-1 text-center">
+    <main className=" px-4 grid grid-row-4 grid-column-1 sm:grid-row-3 sm:grid-column-2 m-2 h-screen">
+      <section className="bg-slate-300  sm:col-start-1 sm:col-end-2 sm:col-span-1 row-start-1 row-end-1 sm:row-start-1 sm:row-end-1 sm:row-span-1 text-center">
         <Image className="absolute -top-32 -left-32 -z-10" priority={false} src={SunIcon} width={250} alt="" />
         <h1 className="text-3xl font-bold text-brown ">First Time Renter's Checklist</h1>
         <p className="text-sm text-mediumGray">Love means preparing you for success!!!</p>
       </section>
-      {/* <section className="bg-red-300 row-start-3 row-end-3 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-2 sm:row-end-2 mt-12 sm:mt-8">
-        <AddAdviceButton />
-      </section> */}
-      <section className="bg-lime-300 row-start-4 row-end-4 sm:col-start-1 sm:col-end-3 sm:col-span-2 sm:row-start-3 sm:row-end-3 ">
+      <section className="bg-lime-300 row-start-4 row-end-4 sm:col-start-1 sm:col-end-2 sm:col-span-1 sm:row-start-1 sm:row-end-2 ">
         <Advice list={AdviceData} />
       </section>
-      <section className="bg-sky-300 row-start-2 row-end-2 row-span-1 sm:col-start-3 sm:col-end-3 sm:row-span-3 mt-8 sm:mt-0">
+      <section className="bg-sky-300 row-start-2 row-end-2 row-span-1 sm:col-start-2 sm:col-end-2 sm:row-span-2 mt-8 sm:mt-0">
         <h2 className='font-bold text-2xl text-brown mb-4 text-center underline sm:hidden'>Checklists</h2>
         <Checklist containerTitle={"Must have Finances"} list={checkListDataA} database={"A"} />
         <Checklist containerTitle={"Need to have Furniture"} list={checkListDataB} database={"B"} />

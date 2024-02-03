@@ -20,7 +20,7 @@ export default function AddAdviceButton({newAdvice}) {
     }
 
     return (
-        <div className='flex flex-col justify-center items-center mt-8'>
+        <div className='flex flex-col justify-center items-center mt-8 sm:mt-32'>
             {!flipUI &&
                 <>
                     <h2 className='font-bold text-2xl text-brown mb-4 underline sm:hidden'>Rental Advice</h2>
