@@ -8,7 +8,7 @@ const Checkbox = ({item, containerTitle}) => {
     const [value, setValue] = useState(false);
 
     return (
-        <div className="flex mb-2">
+        <div className="flex mb-2 sm:w-4/5 sm:mx-14 md:mx-20 lg:w-full">
             <input checked={value} onChange={()=> setValue(!value)} type="checkbox" id="item-1" className="checked:bg-brown bg-paleYellow cursor-pointer mr-2 mt-1.5 flex justify-center items-center p-2 h-4 text-2xl appearance-none border border-brown border-solid rounded" />
             <label htmlFor="item-1" >{item}</label>
         </div> 

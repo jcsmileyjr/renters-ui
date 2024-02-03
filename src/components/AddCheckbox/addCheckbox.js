@@ -21,7 +21,7 @@ export default function AddCheckbox ({newCheckListItem}) {
     return (
         <div className="flex justify-center items-center mt-4">
             {!flipUI &&
-                <button onClick={() => setFlipUI(true)} className='bg-paleYellow text-mediumGray border border-brown border-solid rounded w-2/5 sm:w-2/4 p-1 flex justify-center items-center gap-2'>
+                <button onClick={() => setFlipUI(true)} className='bg-paleYellow text-mediumGray border border-brown border-solid rounded w-2/5 md:w-2/6 lg:w-2/4 p-1 flex justify-center items-center gap-2'>
                     <Image priority={false} src={grayPlusIcon} width={15} height={10} alt="Plus icon, when click, opens add item to Checklist page." />
                     <p>Add Item</p>
                 </button>
