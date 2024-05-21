@@ -12,6 +12,10 @@ An innovative application designed to assist young adults in transitioning to ne
 2. An inventory of necessary furniture items for individuals moving into their first residence, with the option for users to provide additional suggestions.
 3. Guidelines for first time renters, with the option for users to share additional advice and indicate agreement with a thumbs up.
 
+
+## Backend
+The backend is located in a seperate repo, https://github.com/jcsmileyjr/checklist. It's a Java & Springboot application that connects an H2 database using Hibernate with a Spring Boot API to the frontend. 
+
 ## Built with
 - **Next.js** is a frontend JavaScript framework, based on React but with server components/actions, used for displaying the user interface. 
 - **TailwindCSS** is a CSS library utilized to quickly style the application. 
